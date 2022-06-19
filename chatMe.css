@@ -726,7 +726,7 @@
             }
             .side-bar #cancel {
                 display: flex;
-                padding-top: 1rem;
+                gap: 0.5rem;
             }
         }
         /*---------------------RESPONSIVENESS FOR SMALLER PHONES AND TABLETS--------------------------*/
