@@ -1,20 +1,36 @@
+//called the class "menu-item"
 const menuItem = document.querySelectorAll('.menu-item');
+//called the class "message-notification"
 const messagesNotification = document.querySelector('#messages-notifications');
+//called the class "messages"
 const messages = document.querySelector('.messages');
+//called the class "message"
 const message = messages.querySelectorAll('.message');
+//called the class "message-search"
 const messageSearch = document.querySelector('#message-search');
+//called the class "theme"
 const theme = document.querySelector('#theme');
+//called the class "customize-theme"
 const themeModal = document.querySelector('.customize-theme');
+//called the class "span" that has a parenet of choose-size
 const fontSizes = document.querySelectorAll('.choose-size span');
-var root = document.querySelector(':root')
+//called the classes undr the root"
+var root = document.querySelector(':root');
+//called the span element under the choose-color clas under choose-color
 const colorPallete = document.querySelectorAll('.choose-color span');
+//called the class "bg-1"
 const Bg1 = document.querySelector('.bg-1');
+//called the class "bg-2"
 const Bg2 = document.querySelector('.bg-2');
+//called the class "bg-3"
 const Bg3 = document.querySelector('.bg-3');
+//called the class "menu-btn"
 const menuBar = document.querySelector('.menu-btn');
+//called the class "left"
 const sideBar = document.querySelector('.left');
+//called the class "cancel"
 const closeBtn = document.querySelector('#cancel');
-// const bodyBackground = document.querySelector('body')
+
 
 //remove the active class from the active item when the user clicks on it.
 const removeActive = () => {
@@ -40,7 +56,7 @@ menuItem.forEach(item => {
             removeActive();
             item.classList.add('active');
 
-            //dfgggtg
+            //I called an if statement too show the messages with class "notifications-popup" whenever the user clicks on the notification button
             if (item.id != 'notifications') {
                 document.querySelector('.notifications-popup').style.display = 'none';
             } else {
@@ -49,8 +65,9 @@ menuItem.forEach(item => {
             }
         })
     })
-    //MESAGES
+    //added an event listener click to the messagesNotification
 messagesNotification.addEventListener('click', () => {
+        //add a  boxShadow to the message class
         messages.style.boxShadow = '0 0 1rem var(--color-primary)';
         messagesNotification.querySelector('#notification-count').style.display = 'none';
         setTimeout(() => messages.style.boxShadow = 'none', 2000);
