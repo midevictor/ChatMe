@@ -35,6 +35,10 @@
             border: none;
         }
         
+        html {
+            font-size: 14px;
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--color-dark);
@@ -43,8 +47,10 @@
         }
         
         .container {
+            display: grid;
             width: 90%;
             margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
         
         .profile-picture {
@@ -739,6 +745,7 @@
                 grid-template-columns: 0 auto 0;
                 gap: 0;
                 width: 100%;
+                place-items: center;
             }
             main .container .left {
                 grid-column: 1/2;
@@ -820,6 +827,15 @@
             body {
                 width: 100%;
                 margin: auto;
-                max-width: 100vw;
+                max-width: 100%;
+                display: grid;
+                place-items: center;
+            }
+            /*  */
+        }
+        
+        @media only screen and (max-width: 400px) {
+            .container {
+                width: 100%;
             }
         }

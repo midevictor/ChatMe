@@ -96,6 +96,19 @@ const searchMessage = () => {
             })
         })
     }
+    // const searchMessage = (e) => {
+    //         const value = e.target.value.toLowerCase();
+    //         // console.log(value);
+    //         const texts = document.getquerySelectorAll('.message-body h5');
+    //         texts.forEach(function(chat) {
+    //             let message = chat.firstChild.textContent;
+    //             if (message.toLowerCase().indexOf(value) !== -1) {
+    //                 chat.style.display = 'block';
+    //             } else {
+    //                 chat.style.display = 'none';
+    //             }
+    //         })
+    //     }
     //chat search
 messageSearch.addEventListener('keyup', searchMessage);
 //THEME CUSTOMISATION Opens the modal
